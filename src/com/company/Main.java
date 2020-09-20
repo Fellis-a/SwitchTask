@@ -10,13 +10,13 @@ public class Main {
         System.out.println("перевод различных единиц массы в килограммы");
         System.out.println("выберите число: 1-килограмм 2-миллиграмм 3-грамм 4-тонна 5-центнер");
 
-            int n = scanner.nextInt();
-        if (n>0&&n<6) {
+        int number = scanner.nextInt();
+        if (number > 0 && number < 6) {
             System.out.println("введите массу");
-            float a = scanner.nextInt();
+            float transfer = scanner.nextInt();
 
-            float result = Logic.Measure(n, a);
-            String outMessage = Logic.Message(n);
+            float result = Logic.Measure(number, transfer);
+            String outMessage = Logic.Message(number);
 
             System.out.println(outMessage);
             System.out.print(result);

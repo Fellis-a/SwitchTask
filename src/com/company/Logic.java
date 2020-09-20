@@ -1,52 +1,54 @@
 package com.company;
 
 public class Logic {
-    public static float Measure(int n, float a) {
+    public static float Measure(int number, float transfer) {
 
-        switch (n) {
+        switch (number) {
             case 1:
-                return a;
+                break;
             case 2:
-                a = (a / 1000000);
-                return a;
+                transfer = (transfer / 1000000);
+                break;
             case 3:
-                a = (a / 1000);
-                return a;
+                transfer = (transfer / 1000);
+                break;
             case 4:
-                a = (a * 1000);
-                return a;
+                transfer = (transfer * 1000);
+                break;
             case 5:
-                a = (a * 100);
-                return a;
+                transfer = (transfer * 100);
+                break;
 
             default:
                 return 0;
 
 
         }
-
+        return transfer;
     }
-    public static String Message(int n){
+
+    public static String Message(int number) {
         String outMessage;
-        switch (n){
+        switch (number) {
             case 1:
                 outMessage = "введенная масса в килограммах:";
-                return outMessage ;
+                break;
             case 2:
                 outMessage = "миллиграмм в килограммах::";
-                return outMessage;
+                break;
             case 3:
                 outMessage = "грамм в килограммах:";
-                return outMessage;
+                break;
             case 4:
                 outMessage = "тонн в килограммах:";
-                return outMessage;
+                break;
             case 5:
                 outMessage = "центнеров в килограммах:";
-                return outMessage;
+                break;
 
             default:
                 return "введите число от 1 до 5";
         }
+        return outMessage;
     }
 }
